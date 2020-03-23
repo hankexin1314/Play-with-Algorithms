@@ -1,0 +1,9 @@
+
+*.xml
+*.xml
+.idea/workspace.xml
+.DS_Store
+*.xml
+*.class
+*.kotlin_module
+*.xml

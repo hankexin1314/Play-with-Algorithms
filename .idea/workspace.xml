@@ -10,11 +10,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Kotlin Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Yhn2X70rMzEs7y2ajPPWCMnmT2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -38,13 +43,13 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.QuickSort3Ways">
-    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sorting.MergeSort" />
+  <component name="RunManager" selected="Application.BinarySearch">
+    <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Array.BinarySearch" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Sorting.*" />
+          <option name="PATTERN" value="Array.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,11 +111,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.QuickSort3Ways" />
         <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.MergeSort3" />
         <item itemvalue="Application.MergeSort2" />
-        <item itemvalue="Application.MergeSort" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +132,9 @@
       <workItem from="1583403487495" duration="1057000" />
       <workItem from="1583802547122" duration="8527000" />
       <workItem from="1584324691656" duration="1089000" />
-      <workItem from="1584411905802" duration="11235000" />
+      <workItem from="1584411905802" duration="11236000" />
+      <workItem from="1584498132534" duration="3195000" />
+      <workItem from="1584948401278" duration="1846000" />
     </task>
     <servers />
   </component>
@@ -135,30 +142,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1584436937909">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1584453654056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584436937909" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1584436937908">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654056" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1584453654055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584436937908" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1584436937908">
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654055" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1584453654055">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584436937908" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1584436937908">
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654055" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1584453654056">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584436937908" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654056" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1584411907786">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1584948403586">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584411907786" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584948403586" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584435307415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
