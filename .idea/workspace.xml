@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -37,9 +37,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Remove_Duplicates_2_80" />
+      <recent name="Remove_Duplicates_26" />
+      <recent name="Remove_Element_27" />
+      <recent name="Move_Zeros_283" />
       <recent name="Sorting" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\Play-with-Algorithms\src" />
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
@@ -49,7 +54,7 @@
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Array.*" />
+          <option name="PATTERN" value="Move_Zeros_283.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +139,7 @@
       <workItem from="1584324691656" duration="1089000" />
       <workItem from="1584411905802" duration="11236000" />
       <workItem from="1584498132534" duration="3195000" />
-      <workItem from="1584948401278" duration="1846000" />
+      <workItem from="1584948401278" duration="16391000" />
     </task>
     <servers />
   </component>
