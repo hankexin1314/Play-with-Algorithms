@@ -37,37 +37,24 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Find_Kth_Largest_215" />
       <recent name="Remove_Duplicates_2_80" />
       <recent name="Remove_Duplicates_26" />
       <recent name="Remove_Element_27" />
       <recent name="Move_Zeros_283" />
-      <recent name="Sorting" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src" />
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BinarySearch">
+  <component name="RunManager" selected="Application.Solution1">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Array.BinarySearch" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Move_Zeros_283.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MergeSort2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Sorting.MergeSort2" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Sorting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,13 +101,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Merge_88.Solution1" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Merge_88.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution1" />
         <item itemvalue="Application.BinarySearch" />
         <item itemvalue="Application.QuickSort3Ways" />
         <item itemvalue="Application.QuickSort" />
         <item itemvalue="Application.MergeSort3" />
-        <item itemvalue="Application.MergeSort2" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +139,9 @@
       <workItem from="1584324691656" duration="1089000" />
       <workItem from="1584411905802" duration="11236000" />
       <workItem from="1584498132534" duration="3195000" />
-      <workItem from="1584948401278" duration="16391000" />
+      <workItem from="1584948401278" duration="17086000" />
+      <workItem from="1585020489072" duration="11108000" />
+      <workItem from="1585041360192" duration="6190000" />
     </task>
     <servers />
   </component>
@@ -147,30 +149,46 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1584453654056">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1585025715575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654056" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1584453654055">
+    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1585025715575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654055" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1584453654055">
+    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1585025715575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654055" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1584453654056">
+    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1585025715575">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584453654056" />
+    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1585025715576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715576" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1585025715575">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1585025715575">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715575" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1585025715576">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585025715576" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1584948403586">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585020489437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584948403586" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585020489437" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584435307415">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
