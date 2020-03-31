@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Intersection_2_350" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Add_Two_Numbers_2_445" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -38,45 +38,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Four_Sum_18" />
-      <recent name="Two_Sum_1" />
-      <recent name="Is_Isomorphic_205" />
-      <recent name="Intersection_2_350" />
-      <recent name="Find_Anagrams_438" />
+      <recent name="Add_Two_Numbers_2" />
+      <recent name="Odd_Even_List_328" />
+      <recent name="Partition_List_86" />
+      <recent name="Reverse_List_206" />
+      <recent name="Contains_Nearby_Duplicate_219" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\Play-with-Algorithms\src\Intersection_2_350" />
+      <recent name="D:\workspace\Play-with-Algorithms\src\Add_Two_Numbers_2_445" />
       <recent name="D:\workspace\Play-with-Algorithms\src" />
+      <recent name="D:\workspace\Play-with-Algorithms\src\Intersection_2_350" />
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (2)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Intersection_2_350.Main" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Intersection_2_350.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Is_Happy_202.Solution" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Is_Happy_202.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Solution (5)">
     <configuration name="Solution (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Three_Sum_Closest_16.Solution" />
       <module name="Play-with-Algorithms" />
@@ -90,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Min_Window_76.Solution" />
+    <configuration name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Group_Anagrams_49.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Min_Window_76.*" />
+          <option name="PATTERN" value="Group_Anagrams_49.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +78,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Length_Of_Longest_Substring_3.Solution1" />
+    <configuration name="Solution (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Contains_Nearby_Almost_Duplicate_220.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Length_Of_Longest_Substring_3.*" />
+          <option name="PATTERN" value="Contains_Nearby_Almost_Duplicate_220.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Add_Two_Numbers_2.Solution" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Add_Two_Numbers_2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Partition_List_86.Solution" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Partition_List_86.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution (2)" />
-        <item itemvalue="Application.Solution (1)" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Solution (5)" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Solution1 (1)" />
+        <item itemvalue="Application.Solution (4)" />
+        <item itemvalue="Application.Solution (3)" />
+        <item itemvalue="Application.Solution (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +149,9 @@
       <workItem from="1585191416572" duration="3841000" />
       <workItem from="1585216086697" duration="9320000" />
       <workItem from="1585277788003" duration="11950000" />
-      <workItem from="1585401362640" duration="771000" />
+      <workItem from="1585401362640" duration="9062000" />
+      <workItem from="1585536992562" duration="8920000" />
+      <workItem from="1585617329293" duration="13776000" />
     </task>
     <servers />
   </component>
@@ -160,50 +163,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585229239586" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1585302876799">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1585643848629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876799" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1585302876798">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1585643848629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876798" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1585302876798">
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1585643848629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876798" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1585302876798">
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1585643848629">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876798" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1585302876799">
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1585642162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876799" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1585302876799">
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
+    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1585642162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876799" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1585302876799">
+    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
+    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1585642162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876799" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1585302876799">
+    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1585642162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585302876799" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585401370465">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585617354404">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585401370465" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585122000067">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585617354404" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585623980982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585122000067" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585623980982" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
