@@ -38,11 +38,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Add_Two_Numbers_2" />
-      <recent name="Odd_Even_List_328" />
-      <recent name="Partition_List_86" />
-      <recent name="Reverse_List_206" />
-      <recent name="Contains_Nearby_Duplicate_219" />
+      <recent name="Reverse_K_Group_25" />
+      <recent name="Swap_Pairs_24" />
+      <recent name="Merge_Two_Lists_21" />
+      <recent name="Delete_Duplicates_82" />
+      <recent name="Remove_Element_203" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Add_Two_Numbers_2_445" />
@@ -51,13 +51,13 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (5)">
-    <configuration name="Solution (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Three_Sum_Closest_16.Solution" />
+  <component name="RunManager" selected="Application.Solution (1)">
+    <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Delete_Duplicates_82.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Three_Sum_Closest_16.*" />
+          <option name="PATTERN" value="Delete_Duplicates_82.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,11 +119,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Solution (5)" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Solution (4)" />
         <item itemvalue="Application.Solution (3)" />
-        <item itemvalue="Application.Solution (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -151,7 +151,9 @@
       <workItem from="1585277788003" duration="11950000" />
       <workItem from="1585401362640" duration="9062000" />
       <workItem from="1585536992562" duration="8920000" />
-      <workItem from="1585617329293" duration="13776000" />
+      <workItem from="1585617329293" duration="14526000" />
+      <workItem from="1585702063743" duration="6402000" />
+      <workItem from="1585745364238" duration="5090000" />
     </task>
     <servers />
   </component>
@@ -163,50 +165,50 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585229239586" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1585643848629">
+    <state width="1877" height="186" key="GridCell.Tab.0.bottom" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1585643848629">
+    <state width="1877" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.0.center" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1585643848629">
+    <state width="1877" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.0.left" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1585643848629">
+    <state width="1877" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.0.right" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585643848629" />
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1585642162453">
+    <state width="1877" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
-    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1585642162453">
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
-    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1585642162453">
+    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
-    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1585642162453">
+    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1585709282088">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585642162453" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585617354404">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585745728160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585617354404" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585623980982">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585745728160" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585702323920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585623980982" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585702323920" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
