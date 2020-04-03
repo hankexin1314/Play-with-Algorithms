@@ -38,11 +38,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Reverse_K_Group_25" />
-      <recent name="Swap_Pairs_24" />
-      <recent name="Merge_Two_Lists_21" />
-      <recent name="Delete_Duplicates_82" />
-      <recent name="Remove_Element_203" />
+      <recent name="Is_Palindrome_234" />
+      <recent name="Reorder_List_143" />
+      <recent name="Rotate_Right_61" />
+      <recent name="Remove_Nth_From_End_19" />
+      <recent name="Delete_Node_237" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Add_Two_Numbers_2_445" />
@@ -154,6 +154,9 @@
       <workItem from="1585617329293" duration="14526000" />
       <workItem from="1585702063743" duration="6402000" />
       <workItem from="1585745364238" duration="5090000" />
+      <workItem from="1585791498545" duration="6559000" />
+      <workItem from="1585817613284" duration="1779000" />
+      <workItem from="1585878818579" duration="4895000" />
     </task>
     <servers />
   </component>
@@ -201,10 +204,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585745728160">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585878810520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585745728160" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585878810520" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585702323920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
