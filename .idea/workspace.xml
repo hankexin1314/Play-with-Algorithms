@@ -38,11 +38,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Simplify_Path_71" />
       <recent name="Is_Palindrome_234" />
       <recent name="Reorder_List_143" />
       <recent name="Rotate_Right_61" />
       <recent name="Remove_Nth_From_End_19" />
-      <recent name="Delete_Node_237" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Add_Two_Numbers_2_445" />
@@ -51,7 +51,7 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (1)">
+  <component name="RunManager" selected="Application.Solution2">
     <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Delete_Duplicates_82.Solution" />
       <module name="Play-with-Algorithms" />
@@ -65,25 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Group_Anagrams_49.Solution" />
+    <configuration name="Solution (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Simplify_Path_71.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Group_Anagrams_49.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Contains_Nearby_Almost_Duplicate_220.Solution" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Contains_Nearby_Almost_Duplicate_220.*" />
+          <option name="PATTERN" value="Simplify_Path_71.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,13 +104,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Simplify_Path_71.Solution2" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Simplify_Path_71.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution2" />
+        <item itemvalue="Application.Solution (2)" />
         <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Solution (5)" />
         <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Solution (4)" />
-        <item itemvalue="Application.Solution (3)" />
       </list>
     </recent_temporary>
   </component>
@@ -156,7 +156,8 @@
       <workItem from="1585745364238" duration="5090000" />
       <workItem from="1585791498545" duration="6559000" />
       <workItem from="1585817613284" duration="1779000" />
-      <workItem from="1585878818579" duration="4895000" />
+      <workItem from="1585878818579" duration="5525000" />
+      <workItem from="1586000197454" duration="5845000" />
     </task>
     <servers />
   </component>
@@ -168,46 +169,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585229239586" />
-    <state width="1877" height="186" key="GridCell.Tab.0.bottom" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.0.bottom" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.0.center" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.0.center" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.0.left" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.0.left" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.0.right" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.0.right" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
-    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1585709282088">
+    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1586006297717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585709282088" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1585878810520">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586000200444">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585878810520" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586000200444" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1585702323920">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
