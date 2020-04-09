@@ -53,7 +53,7 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution2">
+  <component name="RunManager" selected="Application.Solution23_1">
     <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Delete_Duplicates_82.Solution" />
       <module name="Play-with-Algorithms" />
@@ -80,32 +80,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution (5)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Add_Two_Numbers_2.Solution" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Add_Two_Numbers_2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Partition_List_86.Solution" />
-      <module name="Play-with-Algorithms" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Partition_List_86.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Solution2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Simplify_Path_71.Solution2" />
       <module name="Play-with-Algorithms" />
@@ -119,13 +93,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution23_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Stack_Queue.Solution23_1" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Stack_Queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="priorityQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Stack_Queue.priorityQueue" />
+      <module name="Play-with-Algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Stack_Queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution23_1" />
+        <item itemvalue="Application.priorityQueue" />
         <item itemvalue="Application.Solution2" />
         <item itemvalue="Application.Solution (2)" />
         <item itemvalue="Application.Solution (1)" />
-        <item itemvalue="Application.Solution (5)" />
-        <item itemvalue="Application.Solution" />
       </list>
     </recent_temporary>
   </component>
@@ -164,7 +164,10 @@
       <workItem from="1586135211924" duration="7616000" />
       <workItem from="1586220857299" duration="8482000" />
       <workItem from="1586231810037" duration="5000" />
-      <workItem from="1586310387140" duration="7780000" />
+      <workItem from="1586310387140" duration="12509000" />
+      <workItem from="1586333076207" duration="50000" />
+      <workItem from="1586392136367" duration="7766000" />
+      <workItem from="1586402660931" duration="259000" />
     </task>
     <servers />
   </component>
@@ -180,46 +183,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1586140191225" />
-    <state width="1877" height="186" key="GridCell.Tab.0.bottom" timestamp="1586006297717">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1586402597903">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.0.center" timestamp="1586006297717">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586402597903" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1586402597902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.0.left" timestamp="1586006297717">
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586402597902" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1586402597902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.0.right" timestamp="1586006297717">
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586402597902" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1586402597902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1586006297717">
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586402597902" />
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom" timestamp="1586401850357">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1586006297717">
+    <state width="1877" height="186" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1586401850357" />
+    <state width="1877" height="186" key="GridCell.Tab.1.center" timestamp="1586401850356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1586006297717">
+    <state width="1877" height="186" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1586401850356" />
+    <state width="1877" height="186" key="GridCell.Tab.1.left" timestamp="1586401850356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
-    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1586006297717">
+    <state width="1877" height="186" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1586401850356" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right" timestamp="1586401850356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586006297717" />
+    <state width="1877" height="186" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1586401850356" />
     <state x="461" y="161" key="SettingsEditor" timestamp="1584412369794">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586231810065">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586402660126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586231810065" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586402660126" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586318439577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,6 +235,11 @@
           <url>file://$PROJECT_DIR$/src/Three_Sum_Closest_16/Solution.java</url>
           <line>16</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Stack_Queue/Solution23_1.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
