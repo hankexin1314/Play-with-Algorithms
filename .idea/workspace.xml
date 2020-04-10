@@ -39,11 +39,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="BinaryTree_Recursive" />
       <recent name="Stack_Queue" />
       <recent name="" />
       <recent name="Simplify_Path_71" />
       <recent name="Is_Palindrome_234" />
-      <recent name="Reorder_List_143" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Preorder_Traversal_144" />
@@ -167,7 +167,8 @@
       <workItem from="1586310387140" duration="12509000" />
       <workItem from="1586333076207" duration="50000" />
       <workItem from="1586392136367" duration="7766000" />
-      <workItem from="1586402660931" duration="259000" />
+      <workItem from="1586402660931" duration="910000" />
+      <workItem from="1586481215245" duration="4896000" />
     </task>
     <servers />
   </component>
@@ -219,10 +220,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586402660126">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1586481300437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586402660126" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586481300437" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586318439577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
