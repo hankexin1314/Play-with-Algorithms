@@ -38,5 +38,6 @@ public class Solution131_1 {
                 subRes.remove(subRes.size() - 1);
             }
         }
+
     }
 }
