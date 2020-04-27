@@ -53,13 +53,13 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TreeNode">
-    <configuration name="Solution23_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Stack_Queue.Solution23_1" />
+  <component name="RunManager" selected="Application.Solution200_1">
+    <configuration name="Solution200_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Recursion_BackTracking.Solution200_1" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Stack_Queue.*" />
+          <option name="PATTERN" value="Recursion_BackTracking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,11 +115,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution200_1" />
         <item itemvalue="Application.TreeNode" />
         <item itemvalue="Application.Solution401_1" />
         <item itemvalue="Application.Solution47_1" />
         <item itemvalue="Application.Solution93_2" />
-        <item itemvalue="Application.Solution23_1" />
       </list>
     </recent_temporary>
   </component>
@@ -181,6 +181,8 @@
       <workItem from="1587605193944" duration="5799000" />
       <workItem from="1587612858092" duration="25000" />
       <workItem from="1587692519890" duration="6060000" />
+      <workItem from="1587714041084" duration="6000" />
+      <workItem from="1587950385323" duration="10672000" />
     </task>
     <servers />
   </component>
@@ -200,22 +202,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1586140191225" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1587698596098">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1587951987699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587698596098" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1587698596098">
+    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587951987699" />
+    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1587951987699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587698596098" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1587698596098">
+    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587951987699" />
+    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1587951987699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587698596098" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1587698596098">
+    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587951987699" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1587951987699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587698596098" />
+    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587951987699" />
     <state width="1877" height="300" key="GridCell.Tab.1.bottom" timestamp="1587611754310">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -236,10 +238,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1584412369794" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587612879264">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1587714041208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587612879264" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587714041208" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587692843991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
