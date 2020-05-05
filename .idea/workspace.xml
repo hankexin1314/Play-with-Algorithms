@@ -197,6 +197,7 @@
       <workItem from="1588146662549" duration="19000" />
       <workItem from="1588148239827" duration="111000" />
       <workItem from="1588474319892" duration="3525000" />
+      <workItem from="1588639988103" duration="7056000" />
     </task>
     <servers />
   </component>
@@ -256,14 +257,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="156" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588148318875" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588148239032">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1588639997296">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588148239032" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588038905925">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588639997296" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588644069212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588038905925" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1588644069212" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
