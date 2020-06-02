@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="" />
+    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/dp/Solution47_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/dp/Solution49_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/hash/Solution48_1.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,7 +32,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1Yhn2X70rMzEs7y2ajPPWCMnmT2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -119,7 +125,7 @@
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jianzhiOffer.dp.*" />
+          <option name="PATTERN" value="jianzhiOffer.hash.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -243,6 +249,7 @@
       <workItem from="1590713430402" duration="6536000" />
       <workItem from="1590723727864" duration="5000" />
       <workItem from="1590970299950" duration="5665000" />
+      <workItem from="1591058184644" duration="3852000" />
     </task>
     <servers />
   </component>
