@@ -61,9 +61,9 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution17_2">
-    <configuration name="Solution10_1_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.Solution10_1_1" />
+  <component name="RunManager" selected="Application.Solution46_1">
+    <configuration name="MedianFinder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.MedianFinder" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
@@ -75,8 +75,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution12_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.Solution12_1" />
+    <configuration name="QuickSort (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.QuickSort" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
@@ -88,12 +88,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution13_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.Solution13_1" />
+    <configuration name="QuickSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Sorting.QuickSort" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jianzhiOffer.*" />
+          <option name="PATTERN" value="Sorting.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +101,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution14_1_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.Solution14_1_1" />
+    <configuration name="Solution44_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.math.Solution44_1" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jianzhiOffer.*" />
+          <option name="PATTERN" value="jianzhiOffer.math.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution17_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.Solution17_2" />
+    <configuration name="Solution46_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.dp.Solution46_1" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jianzhiOffer.*" />
+          <option name="PATTERN" value="jianzhiOffer.dp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Solution17_2" />
-        <item itemvalue="Application.Solution14_1_1" />
-        <item itemvalue="Application.Solution13_1" />
-        <item itemvalue="Application.Solution12_1" />
-        <item itemvalue="Application.Solution10_1_1" />
+        <item itemvalue="Application.Solution46_1" />
+        <item itemvalue="Application.Solution44_1" />
+        <item itemvalue="Application.MedianFinder" />
+        <item itemvalue="Application.QuickSort (1)" />
+        <item itemvalue="Application.QuickSort" />
       </list>
     </recent_temporary>
   </component>
@@ -225,7 +225,24 @@
       <workItem from="1589510216192" duration="6579000" />
       <workItem from="1589636206069" duration="5425000" />
       <workItem from="1589679759676" duration="5911000" />
-      <workItem from="1589765975502" duration="1195000" />
+      <workItem from="1589765975502" duration="8800000" />
+      <workItem from="1589851281445" duration="8374000" />
+      <workItem from="1589977683525" duration="2443000" />
+      <workItem from="1590024000329" duration="5815000" />
+      <workItem from="1590038266367" duration="6000" />
+      <workItem from="1590111799632" duration="5432000" />
+      <workItem from="1590196807552" duration="4319000" />
+      <workItem from="1590371203572" duration="3922000" />
+      <workItem from="1590400232796" duration="4000" />
+      <workItem from="1590456540943" duration="6637000" />
+      <workItem from="1590477427391" duration="190000" />
+      <workItem from="1590543380433" duration="3943000" />
+      <workItem from="1590547347322" duration="3170000" />
+      <workItem from="1590563623050" duration="5000" />
+      <workItem from="1590626940352" duration="5248000" />
+      <workItem from="1590713430402" duration="6536000" />
+      <workItem from="1590723727864" duration="5000" />
+      <workItem from="1590970299950" duration="5665000" />
     </task>
     <servers />
   </component>
@@ -233,10 +250,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1589337819390">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1590971359436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1589337819390" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590971359436" />
     <state x="739" y="404" width="441" height="240" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1587093836371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -249,50 +266,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="351" y="269" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588148311444" />
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom" timestamp="1589695782117">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589695782117" />
-    <state width="1877" height="206" key="GridCell.Tab.0.center" timestamp="1589695782117">
+    <state width="1877" height="276" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.0.center" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589695782117" />
-    <state width="1877" height="206" key="GridCell.Tab.0.left" timestamp="1589695782117">
+    <state width="1877" height="276" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.0.left" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589695782117" />
-    <state width="1877" height="206" key="GridCell.Tab.0.right" timestamp="1589695782117">
+    <state width="1877" height="276" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.0.right" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="206" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589695782117" />
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom" timestamp="1589641648078">
+    <state width="1877" height="276" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.1.bottom" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589641648078" />
-    <state width="1877" height="300" key="GridCell.Tab.1.center" timestamp="1589641648068">
+    <state width="1877" height="276" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.1.center" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589641648068" />
-    <state width="1877" height="300" key="GridCell.Tab.1.left" timestamp="1589641648068">
+    <state width="1877" height="276" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.1.left" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589641648068" />
-    <state width="1877" height="300" key="GridCell.Tab.1.right" timestamp="1589641648068">
+    <state width="1877" height="276" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
+    <state width="1877" height="276" key="GridCell.Tab.1.right" timestamp="1591013185482">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="300" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589641648068" />
+    <state width="1877" height="276" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591013185482" />
     <state x="72" y="156" key="SettingsEditor" timestamp="1588148318875">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="156" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588148318875" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1589767111932">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1590723729004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589767111932" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589462821985">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590723729004" />
+    <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1590971555304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589462821985" />
+    <state x="661" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590971555304" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590970927998">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590970927998" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -306,6 +327,11 @@
           <url>file://$PROJECT_DIR$/src/Stack_Queue/Solution23_1.java</url>
           <line>8</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/jianzhiOffer/math/Solution44_1.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
