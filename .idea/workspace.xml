@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/dp/Solution47_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/dp/Solution49_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/hash/Solution48_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/hash/Solution50_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/hash/Solution50_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/linkedlist/ListNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/linkedlist/Solution52_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/linkedlist/Solution52_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/search/Solution53_1_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/search/Solution53_2_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/jianzhiOffer/sort/Solution51_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,11 +58,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="jianzhiOffer.linkedlist" />
+      <recent name="jianzhiOffer.hash" />
       <recent name="jianzhiOffer" />
       <recent name="greedy" />
       <recent name="Dynamic_Programming" />
-      <recent name="Recursion_BackTracking" />
-      <recent name="BinaryTree_Recursive" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Preorder_Traversal_144" />
@@ -250,6 +255,9 @@
       <workItem from="1590723727864" duration="5000" />
       <workItem from="1590970299950" duration="5665000" />
       <workItem from="1591058184644" duration="3852000" />
+      <workItem from="1591081458160" duration="339000" />
+      <workItem from="1591146214685" duration="5147000" />
+      <workItem from="1591152455138" duration="623000" />
     </task>
     <servers />
   </component>
@@ -309,10 +317,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="72" y="156" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588148318875" />
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1590723729004">
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1591152454814">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590723729004" />
+    <state x="645" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591152454814" />
     <state x="661" y="147" key="refactoring.ChangeSignatureDialog" timestamp="1590971555304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
