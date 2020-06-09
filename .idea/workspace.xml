@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jianzhiOffer/math/Solution62_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jianzhiOffer/math/Solution62_1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/双指针.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/算法思想/双指针.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +284,10 @@
       <workItem from="1591412089620" duration="3691000" />
       <workItem from="1591490927444" duration="5116000" />
       <workItem from="1591531997819" duration="12000" />
-      <workItem from="1591537108184" duration="4957000" />
+      <workItem from="1591537108184" duration="5794000" />
+      <workItem from="1591583158231" duration="5345000" />
+      <workItem from="1591625243657" duration="2514000" />
+      <workItem from="1591671300009" duration="2920000" />
     </task>
     <servers />
   </component>

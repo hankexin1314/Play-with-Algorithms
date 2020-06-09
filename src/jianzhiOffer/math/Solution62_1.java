@@ -1,6 +1,7 @@
 package jianzhiOffer.math;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Solution62_1 {
 
@@ -16,5 +17,7 @@ public class Solution62_1 {
             n--;
         }
         return list.get(0);
+
     }
-}
+
+    }
