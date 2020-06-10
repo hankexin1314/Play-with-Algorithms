@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/jianzhiOffer/math/Solution62_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jianzhiOffer/math/Solution62_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/双指针.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/算法思想/双指针.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,11 +75,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="动态规划.p337_打家劫舍3" />
       <recent name="jianzhiOffer.binarytree" />
       <recent name="jianzhiOffer.linkedlist" />
       <recent name="jianzhiOffer.hash" />
       <recent name="jianzhiOffer" />
-      <recent name="greedy" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace\Play-with-Algorithms\src\Preorder_Traversal_144" />
@@ -288,6 +286,7 @@
       <workItem from="1591583158231" duration="5345000" />
       <workItem from="1591625243657" duration="2514000" />
       <workItem from="1591671300009" duration="2920000" />
+      <workItem from="1591754092068" duration="4057000" />
     </task>
     <servers />
   </component>
@@ -367,10 +366,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="661" y="147" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590971555304" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591328310068">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1591756407676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591328310068" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1591756407676" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
