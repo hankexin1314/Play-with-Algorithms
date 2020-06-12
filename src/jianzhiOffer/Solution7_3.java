@@ -29,9 +29,18 @@ public class Solution7_3 {
                 stack.push(node.right);
             }
         }
+        String data = "123";
+        data = data.substring(1, data.length() - 1);
 
         return root;
 
     }
+
+    public static void main(String[] args) {
+        String a = "ab";
+        String b = "a" + "b";
+        System.out.println(a == b);
+    }
+
 }
 
