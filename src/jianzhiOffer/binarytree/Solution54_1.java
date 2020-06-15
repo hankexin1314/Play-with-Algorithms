@@ -25,4 +25,9 @@ public class Solution54_1 {
         else if(count > k) return;
         reInorder(root.left, k);
     }
+
+    public static void main(String[] args) {
+        String a = "123";
+        a.charAt(1);
+    }
 }
