@@ -1,5 +1,6 @@
 package jianzhiOffer.binarytree;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 
@@ -27,6 +28,7 @@ public class Solution54_1 {
         }
         else if(count > k) return;
         reInorder(root.left, k);
+
     }
     
 }

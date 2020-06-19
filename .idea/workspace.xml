@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/jianzhiOffer/binarytree/Solution54_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/jianzhiOffer/binarytree/Solution54_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +292,9 @@
       <workItem from="1591925175849" duration="7335000" />
       <workItem from="1592096202525" duration="2449000" />
       <workItem from="1592271370395" duration="1271000" />
-      <workItem from="1592366128244" duration="598000" />
+      <workItem from="1592366128244" duration="1198000" />
+      <workItem from="1592444077191" duration="599000" />
+      <workItem from="1592527620437" duration="1517000" />
     </task>
     <servers />
   </component>
