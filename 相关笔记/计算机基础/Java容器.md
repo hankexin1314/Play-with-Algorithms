@@ -1,8 +1,8 @@
-## 简介
+# 简介
 
 主要分为两类：
 
-- Collection 集合
+- Collection 集合，除了Map以外都实现了这个
 - Map 键值对
 
 ![img](https://camo.githubusercontent.com/d1efb1abc3173aa2a607316dda79bea560fe333f/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f696d6167652d32303139313230383232303934383038342e706e67)
@@ -19,9 +19,9 @@
 
 #### 2. List
 
-- ArrayList：动态数组实现，支持随机访问，均摊时间复杂度
-- Vector：和ArrayList类似，但是线程安全
-- LinkedList：双向链表实现，可以快速插入
+- ArrayList：动态数组实现，支持**随机访问**，均摊时间复杂度
+- Vector：和ArrayList类似，但是**线程安全**
+- LinkedList：双向链表实现，可以**快速插入删除**
 
 #### 3. Queue
 
@@ -36,7 +36,7 @@
 - HashTable：线程安全的HashMap，**不应该使用**，应该使用ConcurrentHashMap，效率更高，引入了分段锁
 - LinkedHashMap：双向链表来维护元素顺序
 
-## 设计模式
+# 设计模式
 
 ### 迭代器模式
 
@@ -51,21 +51,21 @@ Integer[] arr = {1, 2, 3};
 List list = Arrays.asList(arr);
 ```
 
-## 源码分析
+# 源码分析
 
-### 一、ArrayList
+## 一、ArrayList
 
-#### 1. 基本信息
+### 1. 基本信息
 
-基于数组实现，默认大小为10，支持快速随机访问
+基于数组实现，**默认大小为10**，实现了**RandomAccess 接口**（表明这个集合支持快速随机访问）
 
 ```java
 private static final int DEFAULT_CAPACITY = 10;
 ```
 
-#### 2. 扩容
+### 2. 扩容
 
-- 容量不够时，扩容为1.5倍
+- 容量不够时，**扩容为1.5倍**
 - 使用的方法为`Arrays.copyOf()`，代价高，最好创建时指明大小，避免扩容
 
 ```java
@@ -73,7 +73,7 @@ int newCapacity = oldCapacity + (oldCapacity >> 1)；
 elementData = Arrays.copyOf(elementData, newCapacity);
 ```
 
-#### 3. 删除元素
+### 3. 删除元素
 
 - 调用`System.arraycopy()`将后面元素复制到index位置上，时间复杂度O(N)，代价高
 - 不需要缩容，只是将最后一位置为null，交给GC处理
@@ -85,13 +85,19 @@ int numMoved = size - index - 1;
     elementData[--size] = null; // clear to let GC do its work
 ```
 
-#### 4. 序列化
+### 4. 序列化
 
-### 二、Vector
+### 5. copyOf()和arraycopy()异同
 
-#### 1. 同步
+- `copyOf()`内部通过`arraycopy()`实现
+- arraycopy()将原数组的一部分复制到自己创建的数组中，可以指定位置
+- copyOf()封装了一下arraycopy()，不用自己新建数组了，它帮我们新建
 
-synchronized
+## 二、Vector
+
+### 1. 同步
+
+加入了synchronized
 
 ```java
 public synchronized boolean add(E e) {
@@ -109,26 +115,18 @@ public synchronized E get(int index) {
 }
 ```
 
-#### 2. 扩容
+### 2. 扩容
 
-默认扩充为2倍，也可以在构造函数中传入参数，指定每次扩充的值
+默认扩充为**2倍**，也可以在构造函数中传入参数，指定每次扩充的值
 
-#### 3. 替代方案
+### 3. Vector和ArrayList的区别
 
-使用 concurrent 并发包下的 CopyOnWriteArrayList 类
+- ArrayList默认扩容1.5倍，Vector为2倍
+- 因为Vector使用同步，所以速度慢，开销大，**不建议使用**，因为同步可以由程序员自己控制
 
-```java
-List<String> list = new CopyOnWriteArrayList<>();
-```
+## 三、LinkedList
 
-- 读写分离，读在原数组，写在一个复制数组（空间开销大）
-- 写需要用lock加锁
-
-- 读不能读到实时性数据
-
-### 三、LinkedList
-
-#### 1. 基本信息
+### 1. 基本信息
 
 - 基于双向链表实现
 
@@ -142,12 +140,31 @@ private static class Node<E> {
 
 - 存储了First和Last指针
 
-### 四、 HashMap
+### 2. addAll(int index, Collection c)
 
-#### 1. 基本信息
+将一个集合插入指定位置
 
-- 存储着一个Entry数组
-- 默认大小为16
+- 检查index是否合法
+- toArray方法转化为数组
+- 得到前驱和后继节点
+- 插入
+
+### 3. LinkedList和ArrayList的区别
+
+- LinkedList 基于双向链表，ArrayLIst基于数组
+- ArrayList支持快速随机访问
+- LinkedList插入删除不受元素位置影响，且效率高
+- LinkedList因为要存储指针，所以内存占用大
+
+## 四、 HashMap
+
+### 1. 基本信息
+
+- 由数组 + 链表组成，JDK1.8后，链表长度大于8时，会将链表转化为红黑树
+
+> 转化为红黑树前，会先检查数组长度是否小于64，小于的话先扩容
+
+- 数组默认大小为16
 
 ```java
 transient Entry[] table;
@@ -164,49 +181,16 @@ static class Entry<K,V> implements Map.Entry<K,V> {
         key = k;
         hash = h;
     }
-
-    public final K getKey() {
-        return key;
-    }
-
-    public final V getValue() {
-        return value;
-    }
-
-    public final V setValue(V newValue) {
-        V oldValue = value;
-        value = newValue;
-        return oldValue;
-    }
-
-    public final boolean equals(Object o) {
-        if (!(o instanceof Map.Entry))
-            return false;
-        Map.Entry e = (Map.Entry)o;
-        Object k1 = getKey();
-        Object k2 = e.getKey();
-        if (k1 == k2 || (k1 != null && k1.equals(k2))) {
-            Object v1 = getValue();
-            Object v2 = e.getValue();
-            if (v1 == v2 || (v1 != null && v1.equals(v2)))
-                return true;
-        }
-        return false;
-    }
-
-    public final int hashCode() {
-        return Objects.hashCode(getKey()) ^ Objects.hashCode(getValue());
-    }
-
-    public final String toString() {
-        return getKey() + "=" + getValue();
-    }
 }
 ```
 
-- 从next变量可知，数组中每一个位置都是一个链表。
+### 2. 扩容
 
-#### 2. 拉链法工作原理
+- 有一个因子f，默认为0.75，当 size > capacity * f 时扩容，例如大于 16 * 0.75 = 12 时扩容
+- 扩容为原来的2倍，保证是2的倍数
+- 扩容消耗极大，需要重新计算HashCode，建立链表等
+
+### 3. 拉链法工作原理
 
 ```java
 HashMap<String, String> map = new HashMap<>();
@@ -227,28 +211,26 @@ map.put("K3", "V3");
 - 计算key的hashCode
 - 在链表上顺序查找
 
-#### 3. put 操作
+### 4. put 操作
 
 - 支持key为null，但是因为无法计算hashCode，所以将其放在0号位置
 - 对于hashCode相同的值，使用头插法，插在前边
 
-#### 4. 确定桶下标
+### 5. 确定桶下标
 
 - 计算hashCode
 - 取模（使用的时位运算实现，效率高）
 
-#### 5. 扩容
-
-- 动态扩容，数组长度 M， 存储数量 N， 当size超过threshold就会扩容
-- 扩容为原来的2倍（保证是2的n次方）
-- 需要将旧键值对插入新的table中，费时
-- 扩容后需要计算新的桶下标
-
-#### 6. 指定数组容量
+### 6. 指定数组容量
 
 如果指定的数组容量不为2的n次方，将自动转化为 超过指定容量的最小的2次幂
 
-#### 7. 链表转红黑树
+### 7. 链表转红黑树
 
 JDK1.8之后，桶中链表长度大于8会将其转化为红黑树
 
+### 8. 和HashTable的区别
+
+- HashTable线程安全，使用`synchronized`，但是快被淘汰了，不建议使用
+
+## 五、ConcurrentHashMap

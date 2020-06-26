@@ -1,18 +1,172 @@
-# 线程的基础用法
+# 一、并发基础
 
-## 如何创建一个线程
+## 1. 进程和线程
 
-### 实现Callable接口
+- 进程：系统运行程序的基本单位（区别于操作系统）
 
-和Runnable最大的区别就是有返回值
+> 系统运行一个程序，比如QQ，就是进程的创建到消亡的过程
+>
+> Java中，启动main函数就是创建了JVM进程，main函数所在的线程就是一个线程
+
+- 线程：比进程更小的执行单位，一个进程有多个线程。线程共享进程资源，同时自己也拥有一部分资源
+
+## 2. 并发和并行
+
+## 3. 为什么使用多线程
+
+- 计算机硬件——多核心
+- 网络环境——需求多线程
+
+## 4. 线程状态
+
+指的是JVM中的线程状态
+
+### 1. 新建（NEW）
+
+创建了，但是没启动
+
+### 2. 可运行（RUNABLE）
+
+JVM中，开始运行。实际上，代表可以被运行，是否运行还要看资源调度。
+
+### 3. 阻塞（BLOCKED）
+
+请求获取对象锁，但是对象锁被其他线程占用，则处于阻塞状态。当持有锁时，变为可运行状态。
+
+### 4. 死亡（TERMINATED）
+
+线程结束任务，或者发生异常
+
+### 5. 无限期等待（WAITING）
+
+其他线程不唤醒它，则持续沉睡。醒后根据是否能抢到对象锁（CPU资源）转化为可运行或者阻塞状态。
+
+| 进入方法                                   | 退出方法                             |
+| ------------------------------------------ | ------------------------------------ |
+| 没有设置 Timeout 参数的 Object.wait() 方法 | Object.notify() / Object.notifyAll() |
+| 没有设置 Timeout 参数的 Thread.join() 方法 | 被调用的线程执行完毕                 |
+
+
+### 6. 限期等待（TIMED_WAITING）
+
+一定时间后自动唤醒，同样在醒后变为可运行或者阻塞状态
+
+| 进入方法                                 | 退出方法                                        |
+| ---------------------------------------- | ----------------------------------------------- |
+| Thread.sleep() 方法                      | 时间结束                                        |
+| 设置了 Timeout 参数的 Object.wait() 方法 | 时间结束 / Object.notify() / Object.notifyAll() |
+| 设置了 Timeout 参数的 Thread.join() 方法 | 时间结束 / 被调用的线程执行完毕                 |
+
+### 等待和阻塞的区别
+
+- 阻塞是被动的，等到有CPU资源则会变为可运行状态
+- 等待是主动的，等到有CPU资源也不会转化为可运行状态
+
+## 5. 上下文切换
+
+- 线程阻塞时（cpu时间片耗尽），保存此时的**状态**
+- 等到下次分配到CPU时间片，恢复可运行状态，运行时加载之前的**状态**，就是上下文切换
+
+## 6. sleep和wait的区别
+
+- sleep没有释放锁，wait释放锁
+- wait需要唤醒
+
+## 7. start和run方法
+
+- 调用start方法后，**启动线程**，线程进入**就绪**状态，之后执行一些准备工作，最后自动调用run方法
+- run方法仅仅是一个普通方法，调用后，线程在main函数中执行，不是多线程程序。
+
+# 二、线程池
+
+## 1. 为什么要使用线程池
+
+- 降低资源消耗——不需要用一个创建一个，然后用完就销毁
+- 提高响应速度——不需要自己创建，拿来就用
+- 方便线程管理
+
+## 2. 使用Callable和Runnable的区别
+
+- Runnable没有返回值，或者抛出检查异常， Callable可以
+
+## 3. 线程池的execute和submit的区别
+
+- 都是执行线程，execute用于执行没有返回值的，submit用于执行有返回值的
+- 返回`Future`对象用于判断是否执行成功，通过get方法获取值，get会阻塞当前线程直到任务完成
+
+## 4. 创建线程池
+
+- 使用`ThreadPoolExecutor`创建线程池，可以自定义(**set方法**设置参数)，也可以使用预设好的，spring使用`ThreadPoolTaskExecutor`创建
+- FixedThreadPool：线程池中线程始终不变
+- SingleThreadExecutor：只有一个线程
+- CachedThreadPool：只要线程不够就创建新线程
 
 ```java
+public ThreadPoolExecutor(
+    int corePoolSize,//线程池常驻核心线程数
+    int maximumPoolSize,//线程池能容纳同时执行最大线程数
+    long keepAliveTime,//多余的空闲线程的存活时间
+    TimeUnit unit,
+    BlockingQueue<Runnable> workQueue,//被提交尚未被执行的任务队列
+    ThreadFactory threadFactory,//创建线程的线程工厂
+    RejectedExecutionHandler handler//拒绝策略
+    ) 
+{...}
+```
+
+#### 4.1 线程池工作流程
+
+- 不断分配线程，直到核心线程分配完毕
+- 新来的任务放进缓冲队列
+- 队列满了，核心线程全部占用，还有新任务进入，则创建非核心线程，直至上限
+- 如果一个线程无事可做超过keepAliveTime，而且当前线程数大于核心线程数，就停止该线程，直至线程池中的线程数目 == 核心线程数
+- 如果队列满，线程数到最大线程数，还有线程来，则执行**拒绝策略**
+
+### 4.2 拒绝策略
+
+- AbortPolicy: 直接抛出 RejectedExecutionException 异常，是默认的拒绝策略。
+- DiscardPolicy: 直接丢弃任务，不予处理也不抛出异常。如果允许任务丢失，是最好的处理策略。
+- DiscardOldestPolicy: 抛弃队列中等待最久的任务，然后把当前任务加入队列尝试再次提交。
+- CallerRunsPolicy: 使用维护线程池的线程运行，延迟较高，创建**可伸缩队列**，可以确保所有任务都执行，就是要等。
+
+# 二、基本用法
+
+## 1. 线程的使用
+
+创建一个线程的方法：
+
+- 继承Thread类
+- 实现Runnable接口（重写run方法）
+- 实现Callable结构（重写call方法）
+
+```java
+public class MyThread extends Thread {
+    public void run() {
+        // ...
+    }
+}
+public static void main(String[] args) {
+    MyThread mt = new MyThread();
+    mt.start();
+}
+// ---------------------------------------------------------
+public class MyRunnable implements Runnable {
+    @Override
+    public void run() {
+        // ...
+    }
+}
+public static void main(String[] args) {
+    MyRunnable instance = new MyRunnable();
+    Thread thread = new Thread(instance);
+    thread.start();
+}
+// ------------------------------------------------------------
 public class MyCallable implements Callable<Integer> {
     public Integer call() {
         return 123;
     }
 }
-
 public static void main(String[] args) throws ExecutionException, InterruptedException {
     MyCallable mc = new MyCallable();
     FutureTask<Integer> ft = new FutureTask<>(mc);
@@ -22,7 +176,14 @@ public static void main(String[] args) throws ExecutionException, InterruptedExc
 }
 ```
 
+### 使用接口还是继承
 
+- Java单继承，所以用接口
+- 接口开销小，继承类开销较大
+
+## 2. 线程池的使用
+
+### 实现Callable接口
 
 ## 线程池的分类及使用
 
@@ -250,50 +411,7 @@ after
 
 
 
-## 线程状态
-
-指的是JVM中的线程状态
-
-### 1. 新建（NEW）
-
-创建了，但是没启动
-
-### 2. 可运行（RUNABLE）
-
-JVM中，开始运行。实际上，代表可以被运行，是否运行还要看资源调度。
-
-### 3. 阻塞（BLOCKED）
-
-请求获取对象锁，但是对象锁被其他线程占用，则处于阻塞状态。当持有锁时，变为可运行状态。
-
-### 4. 死亡（TERMINATED）
-
-线程结束任务，或者发生异常
-
-### 5. 无限期等待（WAITING）
-
-其他线程不唤醒它，则持续沉睡。醒后根据是否能抢到对象锁（CPU资源）转化为可运行或者阻塞状态。
-
-| 进入方法                                   | 退出方法                             |
-| ------------------------------------------ | ------------------------------------ |
-| 没有设置 Timeout 参数的 Object.wait() 方法 | Object.notify() / Object.notifyAll() |
-| 没有设置 Timeout 参数的 Thread.join() 方法 | 被调用的线程执行完毕                 |
-
-
-### 6. 限期等待（TIMED_WAITING）
-
-一定时间后自动唤醒，同样在醒后变为可运行或者阻塞状态
-
-| 进入方法                                 | 退出方法                                        |
-| ---------------------------------------- | ----------------------------------------------- |
-| Thread.sleep() 方法                      | 时间结束                                        |
-| 设置了 Timeout 参数的 Object.wait() 方法 | 时间结束 / Object.notify() / Object.notifyAll() |
-| 设置了 Timeout 参数的 Thread.join() 方法 | 时间结束 / 被调用的线程执行完毕                 |
-
-### 等待和阻塞的区别
-
-- 阻塞是被动的，等到有CPU资源则会变为可运行状态
-- 等待是主动的，等到有CPU资源也不会转化为可运行状态
+- 
 
 # J.U.S —— JDK实现的锁
 
