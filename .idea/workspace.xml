@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="" />
+    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,13 +90,13 @@
       <recent name="$PROJECT_DIR$/src/Sorting" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution">
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="字符串.p647.Solution" />
+  <component name="RunManager" selected="Application.Solution (1)">
+    <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="查找.p540_有序数组中的单一元素.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="字符串.p647.*" />
+          <option name="PATTERN" value="查找.p540_有序数组中的单一元素.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -101,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution46_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="jianzhiOffer.dp.Solution46_1" />
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="字符串.p647.Solution" />
       <module name="Play-with-Algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="jianzhiOffer.hash.*" />
+          <option name="PATTERN" value="字符串.p647.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution (1)" />
         <item itemvalue="Application.Solution" />
         <item itemvalue="Application.Solution7_3" />
         <item itemvalue="Application.Solution59_1_1" />
         <item itemvalue="Application.Solution57_2_1" />
-        <item itemvalue="Application.Solution46_1" />
       </list>
     </recent_temporary>
   </component>
@@ -293,6 +296,7 @@
       <workItem from="1592444077191" duration="599000" />
       <workItem from="1592527620437" duration="1517000" />
       <workItem from="1592793165016" duration="1122000" />
+      <workItem from="1593230300124" duration="2736000" />
     </task>
     <servers />
   </component>
@@ -328,38 +332,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="351" y="269" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588148311444" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1592796335622">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1593261069669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335622" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1592796335621">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593261069669" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1593261069669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335621" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1592796335621">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593261069669" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1593261069669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335621" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1592796335621">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593261069669" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1593261069669">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335621" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1592796335622">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593261069669" />
+    <state width="1877" height="308" key="GridCell.Tab.1.bottom" timestamp="1593249709771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335622" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1592796335622">
+    <state width="1877" height="308" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593249709771" />
+    <state width="1877" height="308" key="GridCell.Tab.1.center" timestamp="1593249709771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335622" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1592796335622">
+    <state width="1877" height="308" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593249709771" />
+    <state width="1877" height="308" key="GridCell.Tab.1.left" timestamp="1593249709771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335622" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1592796335622">
+    <state width="1877" height="308" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593249709771" />
+    <state width="1877" height="308" key="GridCell.Tab.1.right" timestamp="1593249709771">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592796335622" />
+    <state width="1877" height="308" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593249709771" />
     <state x="72" y="156" key="SettingsEditor" timestamp="1591537116596">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -397,5 +401,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="str5" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
