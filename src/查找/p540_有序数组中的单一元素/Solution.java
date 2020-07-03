@@ -30,6 +30,8 @@ public class Solution {
 
 
     public static void main(String []args) {
+
+        Integer x = 10;
         String str1 = "abc";
         String str2 = new String("def");
         String str3 = "abc";

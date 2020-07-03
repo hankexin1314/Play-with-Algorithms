@@ -19,7 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="" />
+    <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/查找/p540_有序数组中的单一元素/Solution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/查找/p540_有序数组中的单一元素/Solution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/数据结构相关/哈希表.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/数据结构相关/字符串.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/数据结构相关/栈和队列.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/数据结构相关/树.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/数据结构相关/链表.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/动态规划.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/双指针.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/排序.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/查找.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/算法思想/贪心.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -294,6 +308,7 @@
       <workItem from="1592527620437" duration="1517000" />
       <workItem from="1592793165016" duration="1122000" />
       <workItem from="1593230300124" duration="2737000" />
+      <workItem from="1593403123858" duration="674000" />
     </task>
     <servers />
   </component>
