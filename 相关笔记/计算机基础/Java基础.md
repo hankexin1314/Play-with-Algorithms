@@ -1,28 +1,49 @@
 # 大的概念
 
-### 1. JDK与JRE
+### 面向对象和面向过程区别
 
-- JDK是Java Development Kit，Java开发工具，包含JRE和javac编译器之类的东西，可以创建和编异程序
-- JRE是Java运行环境，集成了JVM和一些类库，只能运行，不能创建和编译新程序
+- **面向过程**：性能高，适用于性能优先的场景，比如单片机，嵌入式开发
+- **面向对象**：易维护，易复用，易扩展，因为有封装，继承和多态这些特性。性能差，类的实例化调用消耗大量资源。
+- JAVA性能差的原因：除了类的实例化外，Java编译的结果不是机器码，而是给JVM的字节码，C/C++编译的结果直接就是机器码，所以效率高。
 
-### 2. 跨平台性
+### JAVA特点
+
+- 面向对象
+- 平台无关
+- 支持多线程
+- 支持网络编程
+- 编译与解释共存
+
+### JDK与JRE
+
+- JDK是Java Development Kit，Java开发工具，包含**JRE**和**Javac编译器**之类的东西，可以创建和编异程序
+- JRE是Java运行环境，集成了**JVM**和一些**类库**，只能运行，不能创建和编译新程序
+
+### 跨平台性
 
 - 一次编译，可在多个系统平台上运行（编译为`.class`文件，哪里有JVM，哪里就可以执行）JVM屏蔽了平台多样性。
 
-### 3. Java与C++的区别
+### Java与C++的区别
 
 - 都是面向对象的语言，支持封装，继承，多态
 - Java不能通过指针访问内存（没有指针），C++可以
-- Java不用手动释放内存，C++需要
+- Java不用手动释放内存，自动管理，C++需要手动管理
 - Java单继承，但是有接口，C++支持多继承
 - Java跨平台，C++依赖特定平台
 - C语言**字符串结束符**`\0`，Java不需要，因为Java万物皆对象，既然是对象就有大小，还可以通过length属性指明长度，所以不用。
 
-### 4. Java编译与解释共存
+### Java编译与解释共存
 
 - 高级语言，编译，直接转化为本机可执行的**机器码**，然后执行
 - 解释，执行时逐行解释成**机器码**，边运行变解释
-- Java多了个JVM，所以要先**编译**，然后由JVM解释称**机器码**
+- Java多了个JVM，所以要先**编译**，然后由JVM解释成**机器码**
+
+### 成员变量和局部变量
+
+- 成员变量是类的，局部变量是方法的
+- 成员变量在堆中，局部变量在方法栈中
+- 成员变量随对象生死，局部变量随方法调用生死
+- 成员变量不需要显式赋值，会自动赋默认值，局部变量需要显式赋值
 
 # 关键字
 
@@ -95,8 +116,9 @@ int y = x;         // 拆箱 调用了 x.intValue()
 
 ## 2. String
 
-- 被声明为**final类**，不可被继承，包装类也不可被继承
+- 被声明为**final类**，不可被继承（包装类也不可被继承）
 - 内部使用`char[]`数组存储数据（JDK8），被声明为**final数组**，不可变
+- JDK9之后使用的`byte[]`
 
 ### 2.1 不可变得好处
 
@@ -105,16 +127,19 @@ int y = x;         // 拆箱 调用了 x.intValue()
 - String经常作为参数，不可变比较**安全**
 - 天生具有**线程安全**
 
-### 2.2 String, StringBuffer and StringBuilder
+### 2.2 StringBuffer and StringBuilder
 
-- StringBuilder，StringBuffer可变
-- String，StringBuffer（synchronized实现）线程安全，StringBuilder不安全
+- 二者继承自AbstractStringBuilder类，`char[]`，没有**final**修饰符，可变
+- StringBuffer（synchronized实现）线程安全，StringBuilder不安全
 
 ### 2.3 String Pool
 
 字符串常量池，也就是全局字符串常量池，具体见JVM
 
+### 2.4 性能
 
+- String每次改变都会新建一个String对象，StringBuffer会对对象本身操作
+- StringBuffer因为线程安全，比StringBuilder性能差一点
 
 # 运算
 
@@ -128,18 +153,14 @@ Java是值传递而不是引用传递，也就是说，参数传递传递的是�
 public static void main(String[] args) {
     int num1 = 10;
     int num2 = 20;
-
     swap(num1, num2); // 传递的是字面量的一份拷贝
-
     System.out.println("num1 = " + num1); // num1 = 10
     System.out.println("num2 = " + num2); // num2 = 20
 }
-
 public static void swap(int a, int b) {
     int temp = a;
     a = b;
     b = temp;
-
     System.out.println("a = " + a); // a = 20
     System.out.println("b = " + b);	// b = 10
 }
@@ -154,7 +175,6 @@ public static void main(String[] args) {
     change(arr); // 传递的是引用的拷贝，同一个引用 所以会改变其中的值
     System.out.println(arr[0]); // 0
 }
-
 public static void change(int[] array) {
     array[0] = 0;
 }
@@ -194,6 +214,12 @@ public static void swap(Student x, Student y) {
 - 对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。
 - 对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。
 
+#### 重写equals为什么要重写hashCode
+
+- equals确定相等，则hashCode必须相等
+- hashCode默认根据对象在堆上位置生成
+- 如果不重写，可能出现两个对象equals，但hashCode不等的情况
+
 ## 5. 浅拷贝和深拷贝
 
 - 浅拷贝，二者指向同一个对象（用clone()方法）
@@ -203,7 +229,12 @@ public static void swap(Student x, Student y) {
 
 ## 1. 封装
 
+- 将属性和方法私有化，同时为外界提供一些可以访问的属性和方法
+
 ## 2. 继承
+
+- 子类继承父类的全部属性和方法，对于private的，只是拥有，不能访问
+- 子类可以**扩展**父类的属性和方法，并且可对父类的方法**重写**
 
 ### 2.1 访问权限
 
@@ -221,6 +252,12 @@ public static void swap(Student x, Student y) {
 - 接口成员只能是public，抽象类成员可以有多种访问权限
 - 接口字段默认是static和final，抽象类可以继承非静态，非常量字段。
 
+> JDK8之前，接口只有常量变量和抽象方法
+>
+> JDK8引入默认方法和静态方法
+>
+> JDK9引入私有方法和私有静态方法
+
 ### 2.3 重写
 
 - 子类方法**访问权限** >= 父类方法访问权限
@@ -229,9 +266,55 @@ public static void swap(Student x, Student y) {
 
 > 利用Override方法让编译器检查是否符合要求
 
+> 重载和重写
+>
+> - **重载**：同一个类中，**参数顺序**，**数量**，**类型**，**返回值**，**访问修饰符**有一个不同，**名称**相同
+> - **重写**：父类，子类，子类对父类方法重写，上面说的几项必须相同
+
+### 2.4 定义⼀个不做事且没有参数的构造⽅法的作用
+
+- 执行子类的构造方法前，会优先调用父类的构造方法
+- 如果没有显式地通过`super()`调用，则自动调用无参构造方法
+- 如果没有定义任何构造方法，则会自动生成一个无参构造方法，在调用该类时自动执行
+- 如果父类只定义了有参构造方法，且子类没有通过`super()`调用构造方法，则编译时报错
+
 ## 3. 多态
 
-- **重载**，方法名相同，但是参数类型，个数，顺序至少有一个不同。只有返回值不同不算是重载。
+- **多态**：引用变量所指向的类型(例如cat)和引用变量调用的方法(eat, run)，只有在运行期间才能确定是哪个类的实例对象或者方法（继承，接口）
+
+```java
+public class Animal {
+    int age = 10;
+    static int num = 20;
+    public void eat() { System.out.println("animal eat"); }
+    public static void run() { System.out.println("animal run"); }
+}
+
+public class Cat extends Animal{
+    int age = 80;
+    static int num = 90;
+    public void eat() { System.out.println("cat eat"); }
+    public static void run() { System.out.println("cat run"); }
+    public void sleep() {System.out.println("cat sleep");}
+    public static void main(String[] args) {
+        Animal cat = new Cat();
+        cat.eat(); // cat eat
+        cat.run(); // animal run
+        // cat.sleep(); 无法调用
+        System.out.println(cat.age); // 10
+        System.out.println(cat.num); // 20
+    }
+}
+```
+
+> 成员变量：编译看左边(Animal)，运行看左边
+>
+> 成员方法：编译看左边，运行看右边——动态绑定
+>
+> 静态方法：编译看左边，运行看左边
+>
+> 弊端：无法使用子类特有的属性和方法，例如sleep
+
 
 # 反射
 
@@ -252,24 +335,4 @@ public static void swap(Student x, Student y) {
 - 性能开销：动态解析，无法用JVM优化
 - 内部暴露：可以访问私有成员
 
-## 3. IOC的底层原理
-
-
-
-# 动态代理
-
-
-
 # 版本特性
-
-- JDK8 Spring 内部使用`char[]`数组存储数据， JDK9之后使用`byte[]`，并且内部`coder`属性标明编码方式
-
-## JDK8新特性
-
-
-
-### 1. 接口可以有默认的方法实现
-
-- 如果没有维护成本太高，接口新添加一个方法，就需要修改所有使用该接口的代码。
-- 接口的**字段和方法**默认是public的，不能被定义为private或protected
-- 接口的字段默认是**static**和**final**的
