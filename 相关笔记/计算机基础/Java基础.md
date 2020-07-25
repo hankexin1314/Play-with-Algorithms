@@ -131,6 +131,7 @@ int y = x;         // 拆箱 调用了 x.intValue()
 
 - 二者继承自AbstractStringBuilder类，`char[]`，没有**final**修饰符，可变
 - StringBuffer（synchronized实现）线程安全，StringBuilder不安全
+- 字符串相加`s1 + s2 + s3`是通过新建StringBuffer不断append实现的
 
 ### 2.3 String Pool
 

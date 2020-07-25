@@ -270,7 +270,7 @@ class Singleton {
 
 > 例如字符串相加 `s1 + s2 + s3`
 >
-> 其实JVM会将其解析为一个StringBuilder不断地append，StringBuilder是线程安全的，所以每次append都需要加锁释放锁
+> 其实JVM会将其解析为一个StringBuffer不断地append，StringBuffer是线程安全的，所以每次append都需要加锁释放锁
 >
 > JVM会检测到在这里加锁没必要，所以就会消除
 
