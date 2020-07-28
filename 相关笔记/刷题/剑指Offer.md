@@ -68,7 +68,24 @@ public int findRepeatNumber(int[] nums) {
 
 - 注意边界条件
 
-## 字符串
+#### [剑指 Offer 57. 和为s的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
+
+- 双指针
+
+#### [剑指 Offer 57 - II. 和为s的连续正数序列](https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
+
+- 滑动窗口
+- 返回结果是一个二维数组
+
+>return res.toArray(new int[res.size()]);
+
+#### [*剑指 Offer 64. 求1+2+…+n](https://leetcode-cn.com/problems/qiu-12n-lcof/)
+
+- 发散思维
+
+#### [*剑指 Offer 66. 构建乘积数组](https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/)
+
+## 1. 字符串
 
 #### [05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
 
@@ -85,9 +102,14 @@ public int findRepeatNumber(int[] nums) {
 - String的 `substring`(注意是小写)  `split`(返回值是字符串数组)
 - 字符串转化为数字`Integer.valueOf` `Integer.parseInt`
 
+#### [剑指 Offer 58 - I. 翻转单词顺序](https://leetcode-cn.com/problems/fan-zhuan-dan-ci-shun-xu-lcof/)
 
+- 双指针
+- 库函数（了解常用库函数）
 
-## 链表
+#### [剑指 Offer 58 - II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
+
+## 2. 链表
 
 #### [06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
@@ -114,7 +136,15 @@ public int findRepeatNumber(int[] nums) {
 
 #### [*35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
 
-## 树
+#### [剑指 Offer 52. 两个链表的第一个公共节点](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)
+
+- 注意一下循环的退出条件
+
+## 3. 哈希表
+
+#### [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
+
+## 4. 树
 
 #### [07. 重建二叉树](https://leetcode-cn.com/problems/zhong-jian-er-cha-shu-lcof/)
 
@@ -141,6 +171,15 @@ public int findRepeatNumber(int[] nums) {
 #### [36. 二叉搜索树与双向链表](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/)
 
 - 递归要比迭代快一些
+
+#### [剑指 Offer 55 - I. 二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)
+
+- dfs
+
+#### [剑指 Offer 55 - II. 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/)
+
+- 直接递归（dfs）会重复遍历很多节点
+- 使用后序遍历来避免
 
 ### 二叉树的遍历
 
@@ -225,7 +264,7 @@ public void postorder(TreeNode root) {
 
 
 
-## 栈和队列
+## 5. 栈和队列
 
 #### [09. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
@@ -233,13 +272,38 @@ public void postorder(TreeNode root) {
 
 #### [*31. 栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
-## 动态规划
+#### [*剑指 Offer 59 - I. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
+
+- 滑动窗口其实也是队列
+
+#### [剑指 Offer 59 - II. 队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)
+
+## 6. 动态规划
 
 #### [14- I. 剪绳子](https://leetcode-cn.com/problems/jian-sheng-zi-lcof/)
 
 #### [14- II. 剪绳子 II](https://leetcode-cn.com/problems/jian-sheng-zi-ii-lcof/)
 
 - 要会用贪心的思想证明应该分成2和3
+
+#### [剑指 Offer 42. 连续子数组的最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)
+
+#### [*剑指 Offer 46. 把数字翻译成字符串](https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/)
+
+- 使用递归（dfs）会有重复子问题
+
+#### [剑指 Offer 47. 礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/)
+
+#### [剑指 Offer 48. 最长不含重复字符的子字符串](https://leetcode-cn.com/problems/zui-chang-bu-han-zhong-fu-zi-fu-de-zi-zi-fu-chuan-lcof/)
+
+- 双指针或者动态规划，
+
+#### [*剑指 Offer 60. n个骰子的点数](https://leetcode-cn.com/problems/nge-tou-zi-de-dian-shu-lcof/)
+
+- 把它当成六叉树遍历，可以，但是很慢
+- 动态规划
+
+#### [*剑指 Offer 63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)
 
 ### 斐波那契数列
 
@@ -251,7 +315,7 @@ public void postorder(TreeNode root) {
 
 #### [10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)
 
-## 排序
+## 7. 排序
 
 #### [21. 调整数组顺序使奇数位于偶数前面](https://leetcode-cn.com/problems/diao-zheng-shu-zu-shun-xu-shi-qi-shu-wei-yu-ou-shu-qian-mian-lcof/)
 
@@ -288,9 +352,42 @@ public void postorder(TreeNode root) {
     }
 ```
 
+#### [*剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 
+- 优先队列（nlogk）
+- 如果可以修改原数组，可以使用partition（平均时间复杂度：n）
 
+> 对于优先队列，特别适合处理**海量数据**。主要是不需要一次性将数据全部加载进内存，而是依次读入
+>
+> 对于partition，速度上来说要快一些，但是需要修改原数组，而且需要将数据一次性读入
 
+#### [*剑指 Offer 41. 数据流中的中位数](https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
+
+数据流不是有序的，需要高效找出其中的中位数，有以下几种方法：
+
+|            方法            |    插入时间复杂度    | 查找中位数时间复杂度 |
+| :------------------------: | :------------------: | :------------------: |
+|      不排序，直接插入      |         O(1)         | 利用partition，O(n)  |
+|      数组中插入时排序      | O(n)（移动其他数字） |         O(1)         |
+|      链表中插入时排序      | O(n)（寻找合适位置） |         O(n)         |
+| 二叉搜索树(可能退化为链表) | O(logn)，最差是O(n)  | O(logn)，最差是O(n)  |
+| AVL树（很难在面试中写出）  |       O(logn)        |         O(1)         |
+|       **最大最小堆**       |       O(logn)        |         O(1)         |
+
+- 观察到中位数（1个或者2个数）将数组分为两部分，左边都小于中位数，右边都大于中位数，左右两部分内部的顺序不重要，只要知道最大值和最小值即可
+- 易想到左侧实现一个最大堆，右侧实现一个最小堆，保证两个堆数据个数差不超过1，且最大堆内的数字 <= 最小堆内的数字即可
+
+#### [*剑指 Offer 45. 把数组排成最小的数](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)
+
+- 转化为字符串更容易处理
+
+> 很容易想到按位比较，其实对于字符串x和y，要比较的是 x + y 和 y + x
+
+- 自定义比较器
+
+#### [*剑指 Offer 51. 数组中的逆序对](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
+
+- 这个题一看就是排序的题，别乱想，直接把所有排序算法列出来，然后挨着判断是否可以用
 
 ### 一般排序算法
 
@@ -330,22 +427,21 @@ public void postorder(TreeNode root) {
 
 - 快速排序(具体可见排序算法笔记的整理)
 
-## 查找
-
-
+## 8. 查找
 
 #### [11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 
 - 二分查找（注意等于情况的处理，本质上是没什么办法判断，所以缩小搜索空间）
 
-#### [*剑指 Offer 40. 最小的k个数](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
+#### [*剑指 Offer 53 - I. 在排序数组中查找数字 I](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
 
-- 优先队列（nlogk）
-- 如果可以修改原数组，可以使用partition（平均时间复杂度：n）
+- 二分查找查找左右边界
 
-> 对于优先队列，特别适合处理**海量数据**。主要是不需要一次性将数据全部加载进内存，而是依次读入
->
-> 对于partition，速度上来说要快一些，但是需要修改原数组，而且需要将数据一次性读入
+#### [剑指 Offer 53 - II. 0～n-1中缺失的数字](https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/)
+
+- 注意二分查找的条件
+
+
 
 ### 回溯法
 
@@ -387,12 +483,22 @@ return res.toArray(new String[res.size()]);
 
 - 注意减枝
 
-## 位操作
+## 9. 位操作
 
 #### [15. 二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
 
 - 注意可能为负数
 - 注意位操作优先级低，多加括号
+
+#### [*剑指 Offer 56 - I. 数组中数字出现的次数](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-lcof/)
+
+- 相比于书上的方法，用mask可能更好做
+
+#### [剑指 Offer 56 - II. 数组中数字出现的次数 II](https://leetcode-cn.com/problems/shu-zu-zhong-shu-zi-chu-xian-de-ci-shu-ii-lcof/)
+
+- 正数，负数要问清楚
+
+#### [*剑指 Offer 65. 不用加减乘除做加法](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/)
 
 ### 快速幂
 
@@ -401,7 +507,7 @@ return res.toArray(new String[res.size()]);
 - 注意负数问题
 - 注意整数溢出，很容易忽略，负数变正数有可能有一个数溢出（-2^31）
 
-## 字符串
+## 10. 字符串
 
 #### [*17. 打印从1到最大的n位数](https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/)
 
@@ -439,4 +545,33 @@ private void printNum(char[] num) {
         System.out.println(sb.toString());
 }
 ```
+
+#### [*剑指 Offer 67. 把字符串转换成整数](https://leetcode-cn.com/problems/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu-lcof/)
+
+- 注意溢出部分的判断
+
+> 我刚开始想的是用pre保存res更新之前的值，如果pre > res，说明res溢出，结果出错了
+
+## 11. 数学
+
+#### [*剑指 Offer 43. 1～n整数中1出现的次数](https://leetcode-cn.com/problems/1nzheng-shu-zhong-1chu-xian-de-ci-shu-lcof/)
+
+- 每一位上1出现的次数（要有这个思路）
+
+#### [*剑指 Offer 44. 数字序列中某一位的数字](https://leetcode-cn.com/problems/shu-zi-xu-lie-zhong-mou-yi-wei-de-shu-zi-lcof/)
+
+- 不难，但是边界条件易犯错
+
+#### [*剑指 Offer 49. 丑数](https://leetcode-cn.com/problems/chou-shu-lcof/)
+
+- 空间换时间，主要还是充分利用题目条件
+
+> 看到n不超过1690，其实就可以考虑使用数组将所有数存下来，常数的空间复杂度
+
+#### [*剑指 Offer 61. 扑克牌中的顺子](https://leetcode-cn.com/problems/bu-ke-pai-zhong-de-shun-zi-lcof/)
+
+#### [*剑指 Offer 62. 圆圈中最后剩下的数字](https://leetcode-cn.com/problems/yuan-quan-zhong-zui-hou-sheng-xia-de-shu-zi-lcof/)
+
+- 模拟删除过程（超时）
+- 通过计算直接得出解（数学方法）
 
