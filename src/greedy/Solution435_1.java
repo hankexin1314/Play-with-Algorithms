@@ -4,6 +4,7 @@ import javafx.util.Pair;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Scanner;
 
 public class Solution435_1 {
 
@@ -47,16 +48,16 @@ public class Solution435_1 {
         }
     }
     public static void main(String[] args) {
-        Demo[] ds = new Demo[2];
-        ds[0] = new Demo(0);
-        ds[1] = new Demo(1);
-
-        Arrays.sort(ds, new Comparator<Demo>() {
-            @Override
-            public int compare(Demo o1, Demo o2) {
-                return o2.val - o1.val;
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNextLine()) {
+            String[] strs = sc.nextLine().split(" ");
+            Arrays.sort(strs);
+            StringBuilder sb = new StringBuilder();
+            for(String str: strs) {
+                sb.append(str);
+                sb.append(" ");
             }
-        });
-        System.out.println(Arrays.toString(ds));
+            System.out.println(sb.toString.trim());
+        }
     }
 }
