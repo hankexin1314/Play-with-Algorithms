@@ -3,7 +3,6 @@
 主要分为两类：
 
 - Collection 集合，除了Map以外都实现了这个
-- Map 键值对
 
 ![img](https://camo.githubusercontent.com/d1efb1abc3173aa2a607316dda79bea560fe333f/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f696d6167652d32303139313230383232303934383038342e706e67)
 
@@ -57,21 +56,38 @@ List list = Arrays.asList(arr);
 
 ### 1. 基本信息
 
+- 数组列表，底层实现是**Object[]**，当装载int，long，boolean...时只能装载他们的**包装类**，**线程不安全**
+
+> - 正常使用一般用作查询，所以即使线程不安全也可以用
+> - 增删多的话，应该用LinkedList
+> - 线程安全的话，应该用Vector
+
+- 相比于LinkedList，支持**随机访问**，但是**插入**和**删除**速度较慢
+
 基于数组实现，**默认大小为10**，实现了**RandomAccess 接口**（表明这个集合支持快速随机访问）
 
 ```java
 private static final int DEFAULT_CAPACITY = 10;
 ```
 
-### 2. 扩容
+### 2. 扩容&插入
 
-- 容量不够时，**扩容为1.5倍**
-- 使用的方法为`Arrays.copyOf()`，代价高，最好创建时指明大小，避免扩容
+- **默认数组大小为10**
+
+> 如果使用无参构造（不指定容量），初始化一个容量为0的数组，只有add时才会初始化容量为10
+
+- 容量不够时，**扩容为1.5倍**（代价高）
+
+> 扩容后，将原数组内容复制，然后指针重新指向新数组
 
 ```java
 int newCapacity = oldCapacity + (oldCapacity >> 1)；
 elementData = Arrays.copyOf(elementData, newCapacity);
 ```
+
+- 插入同理，将index和它之后的数据向后复制一格，然后**覆盖插入**
+
+> ArrayList做栈还是很合适的
 
 ### 3. 删除元素
 
@@ -85,13 +101,124 @@ int numMoved = size - index - 1;
     elementData[--size] = null; // clear to let GC do its work
 ```
 
-### 4. 序列化
+## 二、 LinkedList
 
-### 5. copyOf()和arraycopy()异同
+### 1. 基本信息
 
-- `copyOf()`内部通过`arraycopy()`实现
-- arraycopy()将原数组的一部分复制到自己创建的数组中，可以指定位置
-- copyOf()封装了一下arraycopy()，不用自己新建数组了，它帮我们新建
+- 线程不安全，如果要安全，需要调用Collections类中的synchronizedList方法
+- 实现了Deque和List接口
+
+## 三、HashMap
+
+### 1. 基本信息
+
+- 由**数组 + 链表**组成，存储时，首先计算key的**哈希值**，然后存入对应数组的index中。数组中保存的是链表的头结点，如果有冲突就用链表串起来
+
+> JDK1.8之前是头插法——插在链表头。新插进来的数据更有可能被访问
+>
+> JDK1.8之后是尾插法——插在后边（为什么）
+>
+> - 扩容时要重新计算哈希，如果是头插，插入顺序是ABC，链表顺序是CBA
+> - 扩容后，C到了别的位置，BA还在原index位置上，B先重新插入，此时B扔指着A，然后A重新插入，A头插法，插在B的前边，A也指向B（**环形链表**）
+> - 尾插法就不会有这个问题
+
+- 数组默认大小为**16**， JDK1.8后，链表长度大于等于8时，会将链表转化为**红黑树**，小于6时会转化为**链表**（因为需要遍历链表效率低）
+
+> 如果指定的数组容量不为2的n次方，将自动转化为 超过指定容量的最小的2次幂
+>
+> 使用2次幂是为了将key**均匀映射**，因为计算hashCode也是用**位运算**
+>
+> 转化为红黑树前，会先检查数组长度是否小于64，小于的话先扩容
+
+- **线程不安全**，put，get都没有加同步锁
+
+> 上一秒put的值，下一秒get不一定是原值
+>
+> HashTable线程安全，使用`synchronized`，但是快被淘汰了，不建议使用
+>
+> ConcurrentHashMap
+
+### 2. 扩容
+
+- 有一个因子f，默认为0.75，当 size > capacity * f 时扩容，例如大于 16 * 0.75 = 12 时扩容
+- 扩容为原来的**2倍**，保证是2的倍数
+- 扩容消耗极大，需要**重新计算HashCode**，**将数据重新添加到新数组**
+
+### 3. 拉链法工作原理
+
+```java
+HashMap<String, String> map = new HashMap<>();
+map.put("K1", "V1");
+map.put("K2", "V2");
+map.put("K3", "V3");
+```
+
+- 新建一个 HashMap，默认大小为 16；
+- 插入 <K1,V1> 键值对，先计算 K1 的 hashCode 为 115，使用除留余数法得到所在的桶下标 115%16=3。
+- 插入 <K2,V2> 键值对，先计算 K2 的 hashCode 为 118，使用除留余数法得到所在的桶下标 118%16=6。
+- 插入 <K3,V3> 键值对，先计算 K3 的 hashCode 为 118，使用除留余数法得到所在的桶下标 118%16=6，插在 <K2,V2> **前面**。
+
+![img](https://camo.githubusercontent.com/a7761ef5ade932ba3513693653ee65bedfa0f5db/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f696d6167652d32303139313230383233353235383634332e706e67)
+
+查找时：
+
+- 计算key的hashCode
+- 在链表上顺序查找
+
+### 4. 重写equals为什么要重写hashCode()
+
+- Object 类中有`equals`和`hashCode`方法，这里的`equals`比较**内存地址**是否相同，`hashCode`也是根据地址计算
+- 我们在哈希表中查找时，首先计算hashCode，然后去链表或者红黑树中找对应的key，这里用的方法就是`equals`
+- 如果不重写很可能出现两个对象`equals`，但是`hashCode`不等，所以必须重写
+
+## 四、ConcurrentHashMap
+
+### 1. 实现线程安全的几种方法
+
+- 在HashMap上加锁`Collections.synchronizedMap(Map)`
+
+> 内部也是加锁，可以自己传锁对象，不传的话，锁对象就是this
+
+- HashTable
+- ConcurrentHashMap  性能和效率高于前者
+
+### 2. HashTable
+
+- 在HashMap的对数据的操作上加锁（synchronized），效率较低
+- 不允许键值为null，HashMap允许键值为null
+
+> HashTable直接抛异常，HashMap会将hashCode设为0
+
+- HashMap扩容是翻倍，HashTable扩容变3倍
+- HashMap fail-fast,   HashTable fail-safe
+
+> **fail-fast**: Java集合中的一种机制，用迭代器遍历一个集合对象时，如果**遍历过程中**对集合对象的内容进行了修改，会抛出Concurrent Modification Exception
+>
+> **fail-safe**: 遍历过程不是在原集合上，而是在集合的副本上遍历，所以不会抛异常
+>
+> - java.util包都是`fail-fast`
+> - fail-fast在遍历时，会维护一个**变量**，如果集合在遍历期间改变会**改变**这个变量值，遍历时会优先将变量值和期待值比较，相同则继续遍历，不同则抛异常。也有可能变量值刚好修改为期待值，所以一般不利用这个特性并发编程。
+
+
+
+### 3. JDK1.7
+
+- 数组 + 链表，链表中的节点，**value值**和**next值**都被**volatile**修饰
+
+> 有序性，可见性
+
+- 分段锁，数组是`Segment`数组，继承自ReentrantLock。当一个线程占用锁访问一个`Segment`时，不会影响到其他的`Segment`(为数组的每个位置分别加锁)
+- put: 尝试**自旋**获取锁，尝试次数达上限则**阻塞获取**
+- get：因为value有volatile修饰，所以直接取即可
+
+### 3. JDK1.8
+
+- 抛弃原有的Segment数组分段锁，使用`CAS + synchronized`保证并发性
+- next和value使用volatile修饰，引入红黑树
+- put: 写入时，如果节点**为空**，用**CAS**写入，**自旋**保证成功；节点**不为空**，利用**synchronized**写入
+- get: 直接取
+
+
 
 ## 二、Vector
 
@@ -155,82 +282,3 @@ private static class Node<E> {
 - ArrayList支持快速随机访问
 - LinkedList插入删除不受元素位置影响，且效率高
 - LinkedList因为要存储指针，所以内存占用大
-
-## 四、 HashMap
-
-### 1. 基本信息
-
-- 由数组 + 链表组成，JDK1.8后，链表长度大于8时，会将链表转化为红黑树
-
-> 转化为红黑树前，会先检查数组长度是否小于64，小于的话先扩容
-
-- 数组默认大小为16
-
-```java
-transient Entry[] table;
-
-static class Entry<K,V> implements Map.Entry<K,V> {
-    final K key;
-    V value;
-    Entry<K,V> next;
-    int hash;
-
-    Entry(int h, K k, V v, Entry<K,V> n) {
-        value = v;
-        next = n;
-        key = k;
-        hash = h;
-    }
-}
-```
-
-### 2. 扩容
-
-- 有一个因子f，默认为0.75，当 size > capacity * f 时扩容，例如大于 16 * 0.75 = 12 时扩容
-- 扩容为原来的2倍，保证是2的倍数
-- 扩容消耗极大，需要重新计算HashCode，建立链表等
-
-### 3. 拉链法工作原理
-
-```java
-HashMap<String, String> map = new HashMap<>();
-map.put("K1", "V1");
-map.put("K2", "V2");
-map.put("K3", "V3");
-```
-
-- 新建一个 HashMap，默认大小为 16；
-- 插入 <K1,V1> 键值对，先计算 K1 的 hashCode 为 115，使用除留余数法得到所在的桶下标 115%16=3。
-- 插入 <K2,V2> 键值对，先计算 K2 的 hashCode 为 118，使用除留余数法得到所在的桶下标 118%16=6。
-- 插入 <K3,V3> 键值对，先计算 K3 的 hashCode 为 118，使用除留余数法得到所在的桶下标 118%16=6，插在 <K2,V2> **前面**。
-
-![img](https://camo.githubusercontent.com/a7761ef5ade932ba3513693653ee65bedfa0f5db/68747470733a2f2f63732d6e6f7465732d313235363130393739362e636f732e61702d6775616e677a686f752e6d7971636c6f75642e636f6d2f696d6167652d32303139313230383233353235383634332e706e67)
-
-查找时：
-
-- 计算key的hashCode
-- 在链表上顺序查找
-
-### 4. put 操作
-
-- 支持key为null，但是因为无法计算hashCode，所以将其放在0号位置
-- 对于hashCode相同的值，使用头插法，插在前边
-
-### 5. 确定桶下标
-
-- 计算hashCode
-- 取模（使用的时位运算实现，效率高）
-
-### 6. 指定数组容量
-
-如果指定的数组容量不为2的n次方，将自动转化为 超过指定容量的最小的2次幂
-
-### 7. 链表转红黑树
-
-JDK1.8之后，桶中链表长度大于8会将其转化为红黑树
-
-### 8. 和HashTable的区别
-
-- HashTable线程安全，使用`synchronized`，但是快被淘汰了，不建议使用
-
-## 五、ConcurrentHashMap

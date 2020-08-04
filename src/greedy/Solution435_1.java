@@ -2,6 +2,7 @@ package greedy;
 
 import javafx.util.Pair;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -57,7 +58,8 @@ public class Solution435_1 {
                 sb.append(str);
                 sb.append(" ");
             }
-            System.out.println(sb.toString.trim());
+            System.out.println(sb.toString().trim());
+            ArrayList
         }
     }
 }

@@ -22,9 +22,11 @@
     <list default="true" id="0103f5f4-52e8-4d01-84a2-28341994b176" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/greedy/Solution435_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/greedy/Solution435_1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/相关笔记/刷题/剑指Offer.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/刷题/剑指Offer.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/JVM.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/Java容器.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/Java容器.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/Java并发.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/Java并发.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/MySQL.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/MySQL.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/redis.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/redis.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/相关笔记/计算机基础/计算机网络.md" beforeDir="false" afterPath="$PROJECT_DIR$/相关笔记/计算机基础/计算机网络.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,6 +304,8 @@
       <workItem from="1593230300124" duration="2737000" />
       <workItem from="1593403123858" duration="674000" />
       <workItem from="1596162942569" duration="1516000" />
+      <workItem from="1596246170312" duration="1563000" />
+      <workItem from="1596449143056" duration="1000" />
     </task>
     <servers />
   </component>
