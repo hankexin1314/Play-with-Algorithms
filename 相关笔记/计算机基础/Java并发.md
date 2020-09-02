@@ -28,7 +28,7 @@
 指的是JVM中的线程状态
 
 - **新建**：创建了，但是没启动
-- **可运行**：完成了资源准备，只要一有**CPU时间片**就可以运行
+- **可运行**：完成了资源准备，只要一有**CPU时间片**就可以运行，CPU时间片耗尽又变为可运行
 - **阻塞**：请求**对象锁**失败，处于阻塞，持有锁时，变为可运行
 - **死亡**：线程结束，或者异常退出
 - **无限期等待**：等待其他线程显式唤醒。
@@ -77,18 +77,14 @@
 
 ### 2. 带来的问题
 
-线程不安全，死锁
-
-### 3 死锁
-
-- 见操作系统
+线程不安全，死锁（见操作系统）
 
 ## 三、乐观锁和悲观锁
 
 - 首先这两个不是特定的锁，仅仅是两种思想
-- **乐观锁**：假设每次别人使用共享数据都不会修改，**不会上锁**。但是如果要更新数据，会在更新前检查：在**读取到更新这个过程中别人有没有修改**。如果修改过，再次尝试，**重新读取**，直到成功。——CAS
+- **乐观锁**：假设每次别人使用共享数据都不会修改，**不会上锁**。但是如果要更新数据，会在更新前检查：在**读取和更新这两个步骤之间有没有人修改**。如果修改过，再次尝试，**重新读取**，直到成功。——CAS
 - **悲观锁**：假设别人每次都会修改数据，所以每次都上锁。
-- 乐观锁回滚重试，悲观锁阻塞事务
+- 乐观锁**回滚重试**，悲观锁阻**塞事务**
 
 # 线程安全
 
@@ -139,7 +135,7 @@ public static void main(String[] args) throws InterruptedException {
 
 > CAS
 
-- 无同步方案：只要**不共享数据**就不会有线程安全问题
+- **无同步方案**：只要**不共享数据**就不会有线程安全问题
 
 > **栈封闭**：例如线程的虚拟栈，每个线程独享，互不干扰，局部变量不存在线程安全问题
 >
@@ -155,8 +151,6 @@ public static void main(String[] args) throws InterruptedException {
 - JDK1.6之前，synchronized关键字直接上**重量级锁**（monitor 监视器锁），效率低下，JDK1.6之后加入了大量优化，现在的效率优化的较好。
 
 > **monitor锁**依赖于操作系统的**Mutex Lock**(互斥锁)实现，每次加锁解锁都需要操作系统帮忙完成，需要在**用户态**和**内核态**反复切换，效率低下，时间成本高
->
-> - 上锁指的是，每个对象头都会关联一个**monitor锁对象**，每个线程都会尝试获取这个对象，只有得到这个对象的线程才可以执行后续操作。
 
 #### 1.2 使用
 
@@ -223,6 +217,12 @@ class Singleton {
 
 #### 1.5 JDK1.6之后的锁优化
 
+- Java中每一个对象，对象头中都有一个**Mark Word**，用于存储对象自身的运行时数据。同样也存储着现在**锁的状态**，**线程id**等数据
+- 每个线程都有一个**Monitor record**列表，加锁就时对象Mark Word中的LockWord指向线程中的Monitor的起始地址。
+- Monitor是一种机制，每一个对象都可以充当**Monitor对象**
+
+
+
 - JDK1.6之前，使用**synchronized**关键字直接加上**重量级锁**（monitor 监视器锁）
 - JDK1.6之后，使用synchronized会先由**偏向锁** -> **轻量级锁** -> **重量级锁**逐步升级（锁膨胀）
 
@@ -234,16 +234,18 @@ class Singleton {
 
 - 会在第一个获得锁对象的线程A上加**偏向锁**，该线程A执行完毕代码块**不会主动释放偏向锁**，下次如果是**相同线程**尝试获取锁对象，则直接执行，否则锁升级为**轻量级锁**
 
-> - 第一个线程获得锁对象，将锁置为**偏向状态**，然后在Mark Word（位于对象头中）中记录第一个执行该代码块的**线程id**（整个过程都是CAS操作），下次执行时首先检查线程id
+> - 第一个线程获得**锁对象**，Mark Word中锁状态置为1（偏向状态），记录该线程ID，整个过程使用**CAS**
+> - 同一个线程进入，虚拟机不进行任何同步操作，而且不会主动释放锁
+> - 不同线程进来，也会尝试用CAS修改ID，但是会失败，然后锁升级
 > - JDK1.6偏向锁默认开启，之前默认关闭
 
 ##### 2)  轻量级锁
 
 - **偏向锁**关闭，或者多个线程**竞争偏向锁**则升级为**轻量级锁**。轻量级锁允许不同线程**依次**进入临界区。
 
->- 在当前线程栈帧中创建一个**锁记录**(Lock Record)，用来存储Mark Word的拷贝，然后将Lock Record中的owner指向当前对象
->- JVM尝试用CAS把对象原本的Mark Word更新为Lock Record的指针，更新成功则说明获取锁成功
->- 如果失败，检查Mark Word是否指向当前线程的Lock Record，如果是则说明该线程持有该对象锁。否则说明锁被其他线程持有，继续锁升级。
+>- Mark Word中有一个**Lock Word**；线程中有一个**Monitor record**，**Monitor record**中有一个**owner**字段存放该线程的唯一标识
+>- 用CAS尝试将Lock Word指向当前线程的Monitor Record，成功就说明加锁成功
+>- 如果失败，检查Lock Word是否已经指向当前线程，如果不是，说明锁被其他线程持有，发生竞争，锁升级。
 
 ##### 3) 自旋锁和自适应自旋锁
 
@@ -383,6 +385,114 @@ public final int getAndAddInt(Object var1, long var2, int var4) {
 - `ThreadLocalMap`中的key和`ThreadLocal`为弱引用（下次GC就被回收）,value为强引用。
 - 所以很有可能出现key为null的value，永远无法被回收，所以需要手动调用`remove()`
 
+### 5. AQS
+
+- AbstractQueuedSynchronizer 抽象队列同步器，是一个用来构建锁和同步器的框架，例如ReentrantLock和Semaphore都是它构建的。
+
+#### 5.1 原理
+
+- **核心思想**：如果一个线程请求的共享资源空闲，则该线程是有效的工作线程，并且将共享资源加锁。如果请求的共享资源被占用，则需要一系列线程阻塞等待和唤醒时锁分配机制。
+- 这个机制AQS通过CLH队列（虚拟的双向队列）实现，将暂时获取不到锁的线程放入队列中。
+- AQS通过int类型来代表资源，对于ReentrantLock(临界区只能一个线程进入)，int = 0代表资源空闲，int = 1 代表资源占用。而对于Semaphore，int可初始化为
+- 线程排队FIFO，通过CAS操作对资源状态（**资源占有状态**：0 -> 1， 还有就是更新**占有它的线程**）更新
+
+```java
+private volatile int state;//共享变量int，使用volatile修饰保证线程可见性
+
+protected final int getState() {  
+        return state;
+}
+ // 设置同步状态的值
+protected final void setState(int newState) { 
+        state = newState;
+}
+//原子地（CAS操作）将同步状态值设置为给定值update如果当前同步状态的值等于expect（期望值）
+protected final boolean compareAndSetState(int expect, int update) {
+        return unsafe.compareAndSwapInt(this, stateOffset, expect, update);
+}
+```
+
+#### 5.2 资源共享方式
+
+- **独占**，只有一个线程可以占用共享资源，例如ReentrantLock
+- - 公平锁：按照队列顺序，先到先得（新来的线程进入队列尾）
+  - 非公平锁：谁抢到是谁的（**新来的**线程和**队列中的**线程共同竞争）
+- **可共享**，可有多个线程同时占用共享资源，例如Semaphore(信号量)
+
+#### 5.3 AQS组件总结
+
+- **CountDownLatch （倒计时器）：** 同步工具类，倒计时器。每次调用`countDown()`会使计时器减一，到0时，调用await()的方法等待的线程会被唤醒
+
+```java
+public static void main(String[] args) throws InterruptedException {
+    final int totalThread = 10;
+    CountDownLatch countDownLatch = new CountDownLatch(totalThread); // 倒计时10次
+    ExecutorService executorService = Executors.newCachedThreadPool();
+    for (int i = 0; i < totalThread; i++) {
+        executorService.execute(() -> {
+            System.out.print("run..");
+            countDownLatch.countDown();
+        });
+    }
+    countDownLatch.await();
+    System.out.println("end"); // 输出10个run后再输出1个end
+    executorService.shutdown();
+}
+```
+
+- **CyclicBarrier(循环栅栏)：**作用类似，也是计数器，每次调用`await()`方法计数器减一，减到0时，唤醒所有await的线程
+
+```java
+public CyclicBarrier(int parties, Runnable barrierAction) { // 构造函数  第一个参数是要拦住多少个线程，第二个参数是计数器为0时要执行的操作
+    if (parties <= 0) throw new IllegalArgumentException();
+    this.parties = parties;
+    this.count = parties;
+    this.barrierCommand = barrierAction;
+}
+
+public CyclicBarrier(int parties) {
+    this(parties, null);
+}
+```
+
+```java
+public static void main(String[] args) {
+    final int totalThread = 10;
+    CyclicBarrier cyclicBarrier = new CyclicBarrier(totalThread);
+    ExecutorService executorService = Executors.newCachedThreadPool();
+    for (int i = 0; i < totalThread; i++) {
+        executorService.execute(() -> {
+            System.out.print("before..");
+            try {
+                cyclicBarrier.await();  // 拦住线程
+            } catch (InterruptedException | BrokenBarrierException e) {
+                e.printStackTrace();
+            }
+            System.out.print("after.."); // 先输出10个before，然后才有10个after输出
+        });
+    }
+    executorService.shutdown();
+}
+```
+
+- **ReentrantLock**
+
+```java
+private Lock lock = new ReentrantLock();
+public void func() {
+    lock.lock();
+    try {
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i + " ");
+        }
+    } finally {
+        lock.unlock(); // 确保释放锁，从而避免发生死锁。
+    }
+}
+```
+
+# 
+
 # 线程池
 
 ## 一、 为什么要使用线程池
@@ -431,127 +541,11 @@ public ThreadPoolExecutor(
 ### 4.2 拒绝策略
 
 - AbortPolicy: 直接抛出 RejectedExecutionException 异常，是**默认**的拒绝策略。
-- DiscardPolicy: 直接丢弃任务，不予处理也不抛出异常。如果允许任务丢失，是最好的处理策略。
+- DiscardPolicy: 直接丢弃任务，不予处理也不抛出异常。如果允许任务丢失，是**最好**的处理策略。
 - DiscardOldestPolicy: 抛弃队列中等待最久的任务，然后把当前任务加入队列尝试再次提交。
 - CallerRunsPolicy: 使用维护线程池的线程运行，延迟较高，创建**可伸缩队列**，可以确保所有任务都执行，就是要等。
 
 # 未整理笔记
-
-### AQS
-
-- AbstractQueuedSynchronizer 抽象队列同步器，是一个用来构建锁和同步器的框架，例如ReentrantLock和Semaphore都是它构建的。
-
-#### 1. 原理
-
-- **核心思想**：如果一个线程请求的共享资源空闲，则该线程是有效的工作线程，并且将共享资源加锁。如果请求的共享资源被占用，则需要一系列线程阻塞等待和唤醒时锁分配机制。
-- 这个机制AQS通过CLH队列（虚拟的双向队列）实现，将暂时获取不到锁的线程放入队列中。
-- AQS通过int类型来代表资源，对于ReentrantLock(临界区只能一个线程进入)，int = 0代表资源空闲，int = 1 代表资源占用。而对于Semaphore，int可初始化为
-- 通过FIFO对线程排序，通过CAS操作对共享资源更新
-
-```java
-private volatile int state;//共享变量int，使用volatile修饰保证线程可见性
-
-protected final int getState() {  
-        return state;
-}
- // 设置同步状态的值
-protected final void setState(int newState) { 
-        state = newState;
-}
-//原子地（CAS操作）将同步状态值设置为给定值update如果当前同步状态的值等于expect（期望值）
-protected final boolean compareAndSetState(int expect, int update) {
-        return unsafe.compareAndSwapInt(this, stateOffset, expect, update);
-}
-```
-
-#### 2. 资源共享方式
-
-- 独占，只有一个线程可以占用共享资源，例如ReentrantLock
-- - 公平锁：按照队列顺序，先到先得
-  - 非公平锁：谁抢到是谁的
-- 可共享，可有多个线程同时占用共享资源，例如Semaphore(信号量)
-
-#### 3. AQS组件总结
-
-- **CountDownLatch （倒计时器）：** 同步工具类，倒计时器。每次调用`countDown()`会使计时器减一，到0时，调用await()的方法等待的线程会被唤醒
-
-```java
-public static void main(String[] args) throws InterruptedException {
-    final int totalThread = 10;
-    CountDownLatch countDownLatch = new CountDownLatch(totalThread); // 倒计时10次
-    ExecutorService executorService = Executors.newCachedThreadPool();
-    for (int i = 0; i < totalThread; i++) {
-        executorService.execute(() -> {
-            System.out.print("run..");
-            countDownLatch.countDown();
-        });
-    }
-    countDownLatch.await();
-    System.out.println("end"); // 输出10个run后再输出end
-    executorService.shutdown();
-}
-```
-
-- **CyclicBarrier(循环栅栏)：**作用类似，也是计数器，每次调用`await()`方法计数器减一，减到0时，唤醒所有await的线程
-
-```java
-public CyclicBarrier(int parties, Runnable barrierAction) { // 构造函数  第一个参数是要拦住多少个线程，第二个参数是计数器为0时要执行的操作
-    if (parties <= 0) throw new IllegalArgumentException();
-    this.parties = parties;
-    this.count = parties;
-    this.barrierCommand = barrierAction;
-}
-
-public CyclicBarrier(int parties) {
-    this(parties, null);
-}
-```
-
-```java
-public static void main(String[] args) {
-    final int totalThread = 10;
-    CyclicBarrier cyclicBarrier = new CyclicBarrier(totalThread);
-    ExecutorService executorService = Executors.newCachedThreadPool();
-    for (int i = 0; i < totalThread; i++) {
-        executorService.execute(() -> {
-            System.out.print("before..");
-            try {
-                cyclicBarrier.await();  // 拦住线程
-            } catch (InterruptedException | BrokenBarrierException e) {
-                e.printStackTrace();
-            }
-            System.out.print("after.."); // 先输出10个before，然后才有after输出
-        });
-    }
-    executorService.shutdown();
-}
-```
-
-### ReentrantLock
-
-```java
-private Lock lock = new ReentrantLock();
-public void func() {
-    lock.lock();
-    try {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(i + " ");
-        }
-    } finally {
-        lock.unlock(); // 确保释放锁，从而避免发生死锁。
-    }
-}
-```
-
-- 
-
-
-
-
-
-- 
-
-- 
 
 # 二、基本用法
 

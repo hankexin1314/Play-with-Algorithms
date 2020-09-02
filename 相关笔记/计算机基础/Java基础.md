@@ -213,12 +213,12 @@ public static void swap(Student x, Student y) {
 ## 4. equals和==
 
 - 对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。
-- 对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。
+- 对于引用类型，== 判断两个变量是否引用同一个对象，如果没有重写`equals`，则和`==`等价。一般覆盖都是为了判断值是否相等。
 
 #### 重写equals为什么要重写hashCode
 
 - equals确定相等，则hashCode必须相等
-- hashCode默认根据对象在堆上位置生成
+- hashCode默认根据对象地址生成
 - 如果不重写，可能出现两个对象equals，但hashCode不等的情况
 
 ## 5. 浅拷贝和深拷贝
